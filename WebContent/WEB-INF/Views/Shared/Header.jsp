@@ -8,15 +8,15 @@
 	<div id="top-header">
 		<div class="container">
 			<ul class="header-links pull-left">
-				<li><a href="#"><i class="fa fa-phone"></i> +021-95-51-84</a></li>
+				<li><a href="#"><i class="fa fa-phone"></i> +01296342542</a></li>
 				<li><a href="#"><i class="fa fa-envelope-o"></i>
-						email@email.com</a></li>
-				<li><a href="#"><i class="fa fa-map-marker"></i> 1734
-						Stonecoal Road</a></li>
+						hddstore@email.com</a></li>
+				<li><a href="#"><i class="fa fa-map-marker"></i> 223 Lê Văn Việt
+						, P.3, Q.5, TP.HCM</a></li>
 			</ul>
 			<ul class="header-links pull-right">
-				<li><a href="#"><i class="fa fa-dollar"></i> USD</a></li>
-				<li><a href="#"><i class="fa fa-user-o"></i> My Account</a></li>
+				<li><a href="#"><i class="fa fa-dollar"></i> VND</a></li>
+				<li><a href="#"><i class="fa fa-user-o"></i> Tài khoản của tôi</a></li>
 			</ul>
 		</div>
 	</div>
@@ -42,11 +42,11 @@
 					<div class="header-search">
 						<form>
 							<select class="input-select">
-								<option value="0">All Categories</option>
-								<option value="1">Category 01</option>
-								<option value="1">Category 02</option>
+								<option value="0">Loại sản phẩm</option>
+								<option value="1">Laptop</option>
+								<option value="1">Smartphone</option>
 							</select> <input class="input" placeholder="Search here">
-							<button class="search-btn">Search</button>
+							<button class="search-btn">Tìm kiếm</button>
 						</form>
 					</div>
 				</div>
@@ -57,8 +57,8 @@
 					<div class="header-ctn">
 						<!-- Wishlist -->
 						<div>
-							<a href="#"> <i class="fa fa-heart-o"></i> <span>Your
-									Wishlist</span>
+							<a href="#"> <i class="fa fa-heart-o"></i> <span>Danh
+									sách yêu thích của bạn</span>
 								<div class="qty">2</div>
 							</a>
 						</div>
@@ -67,8 +67,8 @@
 						<!-- Cart -->
 						<div class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown"
-								aria-expanded="true"> <i class="fa fa-shopping-cart"></i> <span>Your
-									Cart</span>
+								aria-expanded="true"> <i class="fa fa-shopping-cart"></i> <span>Giỏ
+									hàng của bạn</span>
 								<div class="qty">3</div>
 							</a>
 							<div class="cart-dropdown">
