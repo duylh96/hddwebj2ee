@@ -18,5 +18,10 @@
     	<put-attribute name="title" value="Home Page"/>
     	<put-attribute name="body" value="/WEB-INF/Views/Home/index.jsp"/>
     </definition>
+    
+    <definition name="detail" extends="baseLayout">
+    	<put-attribute name="title" value="Detail Page"/>
+    	<put-attribute name="body" value="/WEB-INF/Views/Detail/index.jsp"/>
+    </definition>
 
 </tiles-definitions>

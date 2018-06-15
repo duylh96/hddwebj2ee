@@ -15,9 +15,14 @@
 
 		<global-results>
 			<result name="home" type="tiles">home</result>
+			<result name="detail" type="tiles">detail</result>
 		</global-results>
 
-		<action name="" class="com.hdd.action.HomeAction"
+		<action name="homeAction" class="com.hdd.action.HomeAction"
+			method="execute">
+		</action>
+
+		<action name="detailAction" class="com.hdd.action.DetailAction"
 			method="execute">
 		</action>
 	</package>

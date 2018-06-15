@@ -102,7 +102,9 @@
 					<h3 class="title">Sản Phẩm Mới</h3>
 					<div class="section-nav">
 						<ul class="section-tab-nav tab-nav">
-							<li class="active"><a data-toggle="tab" href="#tab1">Laptops</a></li>
+							<li class="active"><a data-toggle="tab" href="#tab0">Tất
+									cả</a></li>
+							<li><a data-toggle="tab" href="#tab1">Laptops</a></li>
 							<li><a data-toggle="tab" href="#tab1">Smartphones</a></li>
 							<li><a data-toggle="tab" href="#tab1">Cameras</a></li>
 							<li><a data-toggle="tab" href="#tab1">Phụ kiện</a></li>
@@ -117,221 +119,63 @@
 				<div class="row">
 					<div class="products-tabs">
 						<!-- tab -->
-						<div id="tab1" class="tab-pane active">
+						<div id="tab0" class="tab-pane active">
 							<div class="products-slick" data-nav="#slick-nav-1">
 								<!-- product -->
-								<div class="product">
-									<div class="product-img">
-										<img src="./img/product01.png" alt="">
-										<div class="product-label">
-											<span class="sale">-30%</span> <span class="new">Mới</span>
+								<s:iterator value="products">
+									<div class="product">
+										<div class="product-img">
+											<img src="<s:property value="imageUrl"/>" alt="">
+											<div class="product-label">
+												<span class="sale">-<s:property value="discount" />%
+												</span> <span class="new"><s:property value="productTrend" /></span>
+											</div>
 										</div>
-									</div>
-									<div class="product-body">
-										<p class="product-category">Loại sản phẩm</p>
-										<h3 class="product-name">
-											<a href="#">Macbook Pro</a>
-										</h3>
-										<h4 class="product-price">
-											12.300.000VND
-											<del class="product-old-price">12.500.000VND</del>
-										</h4>
-										<div class="product-rating">
-											<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-												class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-												class="fa fa-star"></i>
+										<div class="product-body">
+											<p class="product-category">
+												<s:property value="productType" />
+											</p>
+											<h3 class="product-name">
+												<s:url var="url" action="detailAction">
+													<s:param name="id">
+														<s:property value="id" />
+													</s:param>
+												</s:url>
+												<a href="<s:property value="#url" />"><s:property
+														value="name" /></a>
+											</h3>
+											<h4 class="product-price">
+												<s:property value="price" />
+												VND
+												<del class="product-old-price">0VND</del>
+											</h4>
+											<div class="product-rating">
+												<s:iterator begin="1" end="rating">
+													<i class="fa fa-star"></i>
+												</s:iterator>
+											</div>
+											<div class="product-btns">
+												<button class="add-to-wishlist">
+													<i class="fa fa-heart-o"></i><span class="tooltipp">Yêu
+														thích</span>
+												</button>
+												<button class="add-to-compare">
+													<i class="fa fa-exchange"></i><span class="tooltipp">So
+														sánh</span>
+												</button>
+												<button class="quick-view">
+													<i class="fa fa-eye"></i><span class="tooltipp">Xem
+														nhanh</span>
+												</button>
+											</div>
 										</div>
-										<div class="product-btns">
-											<button class="add-to-wishlist">
-												<i class="fa fa-heart-o"></i><span class="tooltipp">Thêm
-													vào yêu thích</span>
-											</button>
-											<button class="add-to-compare">
-												<i class="fa fa-exchange"></i><span class="tooltipp">Thêm
-													vào so sánh</span>
-											</button>
-											<button class="quick-view">
-												<i class="fa fa-eye"></i><span class="tooltipp">Xem
-													nhanh</span>
-											</button>
-										</div>
-									</div>
-									<div class="add-to-cart">
-										<button class="add-to-cart-btn">
-											<i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng
-										</button>
-									</div>
-								</div>
-								<!-- /product -->
-
-								<!-- product -->
-								<div class="product">
-									<div class="product-img">
-										<img src="./img/product02.png" alt="">
-										<div class="product-label">
-											<span class="new">Mới</span>
-										</div>
-									</div>
-									<div class="product-body">
-										<p class="product-category">Loại sản phẩm</p>
-										<h3 class="product-name">
-											<a href="#">Headphone Sony</a>
-										</h3>
-										<h4 class="product-price">
-											1.200.000VND
-											<del class="product-old-price">1.300.000VND</del>
-										</h4>
-										<div class="product-rating">
-											<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-												class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-												class="fa fa-star-o"></i>
-										</div>
-										<div class="product-btns">
-											<button class="add-to-wishlist">
-												<i class="fa fa-heart-o"></i><span class="tooltipp">Thêm
-													vào yêu thích</span>
-											</button>
-											<button class="add-to-compare">
-												<i class="fa fa-exchange"></i><span class="tooltipp">Thêm
-													vào so sánh</span>
-											</button>
-											<button class="quick-view">
-												<i class="fa fa-eye"></i><span class="tooltipp">Xem
-													nhanh</span>
+										<div class="add-to-cart">
+											<button class="add-to-cart-btn">
+												<i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng
 											</button>
 										</div>
 									</div>
-									<div class="add-to-cart">
-										<button class="add-to-cart-btn">
-											<i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng
-										</button>
-									</div>
-								</div>
-								<!-- /product -->
-
-								<!-- product -->
-								<div class="product">
-									<div class="product-img">
-										<img src="./img/product03.png" alt="">
-										<div class="product-label">
-											<span class="sale">-30%</span>
-										</div>
-									</div>
-									<div class="product-body">
-										<p class="product-category">Loại sản phẩm</p>
-										<h3 class="product-name">
-											<a href="#">Macbook Air</a>
-										</h3>
-										<h4 class="product-price">
-											20.000.000VND
-											<del class="product-old-price">21.000.000VND</del>
-										</h4>
-										<div class="product-rating"></div>
-										<div class="product-btns">
-											<button class="add-to-wishlist">
-												<i class="fa fa-heart-o"></i><span class="tooltipp">Thêm
-													vào yêu thích</span>
-											</button>
-											<button class="add-to-compare">
-												<i class="fa fa-exchange"></i><span class="tooltipp">Thêm
-													vào so sánh</span>
-											</button>
-											<button class="quick-view">
-												<i class="fa fa-eye"></i><span class="tooltipp">Xem
-													nhanh</span>
-											</button>
-										</div>
-									</div>
-									<div class="add-to-cart">
-										<button class="add-to-cart-btn">
-											<i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng
-										</button>
-									</div>
-								</div>
-								<!-- /product -->
-
-								<!-- product -->
-								<div class="product">
-									<div class="product-img">
-										<img src="./img/product04.png" alt="">
-									</div>
-									<div class="product-body">
-										<p class="product-category">Loại sản phẩm</p>
-										<h3 class="product-name">
-											<a href="#">Tablet SAMSUNG</a>
-										</h3>
-										<h4 class="product-price">
-											2.500.000VND
-											<del class="product-old-price">3.000.000VND</del>
-										</h4>
-										<div class="product-rating">
-											<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-												class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-												class="fa fa-star"></i>
-										</div>
-										<div class="product-btns">
-											<button class="add-to-wishlist">
-												<i class="fa fa-heart-o"></i><span class="tooltipp">Thêm
-													vào yêu thích</span>
-											</button>
-											<button class="add-to-compare">
-												<i class="fa fa-exchange"></i><span class="tooltipp">Thêm
-													vào so sánh</span>
-											</button>
-											<button class="quick-view">
-												<i class="fa fa-eye"></i><span class="tooltipp">Xem
-													nhanh</span>
-											</button>
-										</div>
-									</div>
-									<div class="add-to-cart">
-										<button class="add-to-cart-btn">
-											<i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng
-										</button>
-									</div>
-								</div>
-								<!-- /product -->
-
-								<!-- product -->
-								<div class="product">
-									<div class="product-img">
-										<img src="./img/product05.png" alt="">
-									</div>
-									<div class="product-body">
-										<p class="product-category">Loại sản phẩm</p>
-										<h3 class="product-name">
-											<a href="#">Tai phone SONY</a>
-										</h3>
-										<h4 class="product-price">
-											900.000VND
-											<del class="product-old-price">1.000.000VND</del>
-										</h4>
-										<div class="product-rating">
-											<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-												class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-												class="fa fa-star"></i>
-										</div>
-										<div class="product-btns">
-											<button class="add-to-wishlist">
-												<i class="fa fa-heart-o"></i><span class="tooltipp">Thêm
-													vào yêu thích</span>
-											</button>
-											<button class="add-to-compare">
-												<i class="fa fa-exchange"></i><span class="tooltipp">Thêm
-													vào so sánh</span>
-											</button>
-											<button class="quick-view">
-												<i class="fa fa-eye"></i><span class="tooltipp">Xem
-													nhanh</span>
-											</button>
-										</div>
-									</div>
-									<div class="add-to-cart">
-										<button class="add-to-cart-btn">
-											<i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng
-										</button>
-									</div>
-								</div>
+								</s:iterator>
 								<!-- /product -->
 							</div>
 							<div id="slick-nav-1" class="products-slick-nav"></div>
@@ -383,7 +227,7 @@
 						</li>
 					</ul>
 					<h2 class="text-uppercase">Gía khuyến mãi trong tuần</h2>
-					<p>Tất cả mặt hàng giảm giá đến 50% </p>
+					<p>Tất cả mặt hàng giảm giá đến 50%</p>
 					<a class="primary-btn cta-btn" href="#">Mua ngay</a>
 				</div>
 			</div>
@@ -456,7 +300,7 @@
 													vào so sánh</span>
 											</button>
 											<button class="quick-view">
-												<i class="fa fa-eye"></i><span class="tooltipp">Xem 
+												<i class="fa fa-eye"></i><span class="tooltipp">Xem
 													nhanh</span>
 											</button>
 										</div>
@@ -501,7 +345,7 @@
 													vào so sánh</span>
 											</button>
 											<button class="quick-view">
-												<i class="fa fa-eye"></i><span class="tooltipp">Xem 
+												<i class="fa fa-eye"></i><span class="tooltipp">Xem
 													nhanh</span>
 											</button>
 										</div>

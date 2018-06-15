@@ -58,7 +58,7 @@
 						<!-- Wishlist -->
 						<div>
 							<a href="#"> <i class="fa fa-heart-o"></i> <span>Danh
-									sách yêu thích của bạn</span>
+									sách yêu thích</span>
 								<div class="qty">2</div>
 							</a>
 						</div>
@@ -68,7 +68,7 @@
 						<div class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown"
 								aria-expanded="true"> <i class="fa fa-shopping-cart"></i> <span>Giỏ
-									hàng của bạn</span>
+									hàng</span>
 								<div class="qty">3</div>
 							</a>
 							<div class="cart-dropdown">
