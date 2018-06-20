@@ -11,8 +11,7 @@
 				<li><a href="#"><i class="fa fa-phone"></i> +01296342542</a></li>
 				<li><a href="#"><i class="fa fa-envelope-o"></i>
 						hddstore@email.com</a></li>
-				<li><a href="#"><i class="fa fa-map-marker"></i> 223 Lê Văn Việt
-						, P.3, Q.5, TP.HCM</a></li>
+				<li><a href="#"><i class="fa fa-map-marker"></i> Trường Đại học Công Nghệ Thông Tin-ĐHQG TPHCM, P.Linh Trung, Q.Thủ Đức, TP.HCM</a></li>
 			</ul>
 			<ul class="header-links pull-right">
 				<li><a href="#"><i class="fa fa-dollar"></i> VND</a></li>
