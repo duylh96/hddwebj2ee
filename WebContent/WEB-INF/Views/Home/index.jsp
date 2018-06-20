@@ -126,14 +126,14 @@
 								<s:iterator value="products">
 									<div class="product">
 										<div class="product-img">
-											<img src="<s:property value="imageUrl"/>" alt="">
+											<img src="${imageUrl}" alt="">
 											<div class="product-label">
 												<s:if test="discount != 0">
-													<span class="sale">-<s:property value="discount" />%
-													</span>
+													<s:set var=""></s:set>
+													<span class="sale">-${discountByPercent}% </span>
 												</s:if>
 												<s:if test="!productTrend.toString().equals('Normal')">
-													<span class="new"><s:property value="productTrend" /></span>
+													<span class="new">${productTrend}</span>
 												</s:if>
 											</div>
 										</div>
@@ -151,9 +151,10 @@
 														value="name" /></a>
 											</h3>
 											<h4 class="product-price">
-												<s:property value="price" />
-												VND
-												<del class="product-old-price">0VND</del>
+												${priceFormated}
+												<s:if test="discount != 0">
+													<del class="product-old-price">${oldPrice}</del>
+												</s:if>
 											</h4>
 											<div class="product-rating">
 												<s:iterator begin="1" end="rating">

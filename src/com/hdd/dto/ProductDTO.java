@@ -1,6 +1,7 @@
 package com.hdd.dto;
 
 import java.sql.Date;
+import java.text.DecimalFormat;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -147,5 +148,19 @@ public class ProductDTO {
 
 	public void setUpdatedAt(String updatedAt) {
 		this.updatedAt = updatedAt;
+	}
+
+	public int getDiscountByPercent() {
+		return Math.round(this.discount * 100.0f);
+	}
+
+	public String getPriceFormated() {
+		DecimalFormat formatter = new DecimalFormat("###,###,###");
+		return (formatter.format(Math.round(this.price - this.price * this.discount)) + " VNĐ");
+	}
+
+	public String getOldPrice() {
+		DecimalFormat formatter = new DecimalFormat("###,###,###");
+		return (formatter.format(Math.round(this.price)) + " VNĐ");
 	}
 }

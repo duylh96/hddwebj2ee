@@ -378,9 +378,3 @@ Chống nước	Có
 Thiết bị kết nối	Android và iOS
 Thời gian sử dụng	Khoảng 3 - 4 ngày",0.01,"./img/samsung-gear-fit2-pro.png","SAMSUNG GEAR FIT PRO",4000000,4,1,'2018/06/10',4);
 
-
-
-Quay phim độ phân giải cao HD 720p, Optical SteadyShot (chế độ Active) *1",0,"/img/ixus-190.jpg","Camera CANON IXIS190",40000000,2,1,'2018/06/10',4);
-
-
-
