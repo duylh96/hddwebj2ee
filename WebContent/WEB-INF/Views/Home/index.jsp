@@ -1,3 +1,4 @@
+<%@page import="com.hdd.dto.ProductDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@taglib uri="/struts-tags" prefix="s"%>
@@ -127,8 +128,13 @@
 										<div class="product-img">
 											<img src="<s:property value="imageUrl"/>" alt="">
 											<div class="product-label">
-												<span class="sale">-<s:property value="discount" />%
-												</span> <span class="new"><s:property value="productTrend" /></span>
+												<s:if test="discount != 0">
+													<span class="sale">-<s:property value="discount" />%
+													</span>
+												</s:if>
+												<s:if test="!productTrend.toString().equals('Normal')">
+													<span class="new"><s:property value="productTrend" /></span>
+												</s:if>
 											</div>
 										</div>
 										<div class="product-body">
