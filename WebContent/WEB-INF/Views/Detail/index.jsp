@@ -113,7 +113,7 @@
 									class="qty-down">-</span>
 							</div>
 						</div>
-						<button class="add-to-cart-btn">
+						<button pg="detail" amount="${amount}" id="${id}" class="add-to-cart-btn btnDetail">
 							<i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng
 						</button>
 					</div>

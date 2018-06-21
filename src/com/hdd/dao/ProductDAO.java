@@ -36,7 +36,6 @@ public class ProductDAO extends BaseDAO {
 		} finally {
 			session.close();
 		}
-		getDetail("P1");
 		return products;
 	}
 

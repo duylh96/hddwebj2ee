@@ -11,11 +11,14 @@
 				<li><a href="#"><i class="fa fa-phone"></i> +01296342542</a></li>
 				<li><a href="#"><i class="fa fa-envelope-o"></i>
 						hddstore@email.com</a></li>
-				<li><a href="#"><i class="fa fa-map-marker"></i> Trường Đại học Công Nghệ Thông Tin-ĐHQG TPHCM, P.Linh Trung, Q.Thủ Đức, TP.HCM</a></li>
+				<li><a href="#"><i class="fa fa-map-marker"></i> Trường Đại
+						học Công Nghệ Thông Tin-ĐHQG TPHCM, P.Linh Trung, Q.Thủ Đức,
+						TP.HCM</a></li>
 			</ul>
 			<ul class="header-links pull-right">
 				<li><a href="#"><i class="fa fa-dollar"></i> VND</a></li>
-				<li><a href="#"><i class="fa fa-user-o"></i> Tài khoản của tôi</a></li>
+				<li><a href="#"><i class="fa fa-user-o"></i> Tài khoản của
+						tôi</a></li>
 			</ul>
 		</div>
 	</div>
@@ -80,9 +83,10 @@
 											<h3 class="product-name">
 												<a href="#">product name goes here</a>
 											</h3>
-											<h4 class="product-price">
-												<span class="qty">1x</span>$980.00
-											</h4>
+											<div class="product-price">
+												<span class="qty">0</span>
+												<div id="product-price"></div>
+											</div>
 										</div>
 										<button class="delete">
 											<i class="fa fa-close"></i>

@@ -25,6 +25,7 @@
 		<property name="show_sql">true</property>
 
 		<mapping class="com.hdd.dto.ProductDTO" />
+		<mapping class="com.hdd.dto.CartItemDTO" />
 
 	</session-factory>
 

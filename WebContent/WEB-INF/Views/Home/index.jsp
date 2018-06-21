@@ -178,7 +178,7 @@
 												</div>
 											</div>
 											<div class="add-to-cart">
-												<button class="add-to-cart-btn">
+												<button id="${id}" class="add-to-cart-btn">
 													<i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng
 												</button>
 											</div>
@@ -251,7 +251,7 @@
 												</div>
 											</div>
 											<div class="add-to-cart">
-												<button class="add-to-cart-btn">
+												<button id="${id}" class="add-to-cart-btn">
 													<i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng
 												</button>
 											</div>
@@ -324,7 +324,7 @@
 												</div>
 											</div>
 											<div class="add-to-cart">
-												<button class="add-to-cart-btn">
+												<button id="${id}" class="add-to-cart-btn">
 													<i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng
 												</button>
 											</div>
@@ -397,7 +397,7 @@
 												</div>
 											</div>
 											<div class="add-to-cart">
-												<button class="add-to-cart-btn">
+												<button id="${id}" class="add-to-cart-btn">
 													<i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng
 												</button>
 											</div>
@@ -470,7 +470,7 @@
 												</div>
 											</div>
 											<div class="add-to-cart">
-												<button class="add-to-cart-btn">
+												<button id="${id}" class="add-to-cart-btn">
 													<i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng
 												</button>
 											</div>
@@ -629,7 +629,7 @@
 												</div>
 											</div>
 											<div class="add-to-cart">
-												<button class="add-to-cart-btn">
+												<button id="${id}" class="add-to-cart-btn">
 													<i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng
 												</button>
 											</div>
@@ -702,7 +702,7 @@
 												</div>
 											</div>
 											<div class="add-to-cart">
-												<button class="add-to-cart-btn">
+												<button id="${id}" class="add-to-cart-btn">
 													<i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng
 												</button>
 											</div>
@@ -775,7 +775,7 @@
 												</div>
 											</div>
 											<div class="add-to-cart">
-												<button class="add-to-cart-btn">
+												<button id="${id}" class="add-to-cart-btn">
 													<i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng
 												</button>
 											</div>
@@ -848,7 +848,7 @@
 												</div>
 											</div>
 											<div class="add-to-cart">
-												<button class="add-to-cart-btn">
+												<button id="${id}" class="add-to-cart-btn">
 													<i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng
 												</button>
 											</div>
@@ -921,7 +921,7 @@
 												</div>
 											</div>
 											<div class="add-to-cart">
-												<button class="add-to-cart-btn">
+												<button id="${id}" class="add-to-cart-btn">
 													<i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng
 												</button>
 											</div>

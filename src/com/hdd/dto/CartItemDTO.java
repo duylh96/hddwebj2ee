@@ -1,10 +1,27 @@
 package com.hdd.dto;
 
-public class CartItem {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "CartItems")
+public class CartItemDTO {
+
+	@Id
 	String id;
+
+	@Column(name = "Name")
 	String name;
+
+	@Column(name = "Price")
 	double price;
+
+	@Column(name = "ImageUrl")
 	String imageUrl;
+
+	@Column(name = "Qty")
 	int qty;
 
 	public String getId() {

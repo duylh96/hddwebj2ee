@@ -5,7 +5,7 @@
 <dwr>
 	<allow>
 		<create creator="new" javascript="CartAjax">
-			<param name="class" value="com.hdd.action.HomeAction" />
+			<param name="class" value="com.hdd.dwr.CartAjax" />
 		</create>
 	</allow>
 </dwr>
