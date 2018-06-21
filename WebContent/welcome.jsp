@@ -9,7 +9,7 @@
 <body>
 	<h1>Loading...</h1>
 	<%
-		response.sendRedirect(request.getContextPath() + "homeAction.action");
+		response.sendRedirect(request.getContextPath() + "/homeAction.action");
 	%>
 </body>
 </html>

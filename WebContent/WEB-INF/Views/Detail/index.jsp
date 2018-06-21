@@ -32,10 +32,10 @@
 			<div class="col-md-5 col-md-push-2">
 				<div id="product-main-img">
 					<div class="product-preview">
-						<img src="./img/product01.png" alt="">
+						<img src="${currentProduct.imageUrl}" alt="">
 					</div>
 
-					<div class="product-preview">
+					<!-- <div class="product-preview">
 						<img src="./img/product03.png" alt="">
 					</div>
 
@@ -45,7 +45,7 @@
 
 					<div class="product-preview">
 						<img src="./img/product08.png" alt="">
-					</div>
+					</div> -->
 				</div>
 			</div>
 			<!-- /Product main img -->
@@ -54,20 +54,9 @@
 			<div class="col-md-2  col-md-pull-5">
 				<div id="product-imgs">
 					<div class="product-preview">
-						<img src="./img/product01.png" alt="">
+						<img src="${currentProduct.imageUrl}" alt="">
 					</div>
 
-					<div class="product-preview">
-						<img src="./img/product03.png" alt="">
-					</div>
-
-					<div class="product-preview">
-						<img src="./img/product06.png" alt="">
-					</div>
-
-					<div class="product-preview">
-						<img src="./img/product08.png" alt="">
-					</div>
 				</div>
 			</div>
 			<!-- /Product thumb imgs -->
@@ -87,15 +76,20 @@
 					</div>
 					<div>
 						<h3 class="product-price">
-							4.000.000VND
-							<del class="product-old-price">4.200.000VND</del>
+							${currentProduct.priceFormated}
+							<s:if test="currentProduct.discount != 0">
+								<del class="product-old-price">${currentProduct.oldPrice}</del>
+							</s:if>
 						</h3>
-						<span class="product-available">Còn Hàng</span>
+						<span class="product-available"> <s:if
+								test="currentProduct.amount > 0"> 
+						Còn Hàng
+						</s:if>
+						</span>
 					</div>
-					<p>Đây là dòng sản phẩm mới, với công nghệ mới nhất hiện, pin
-						trâu giúp phục vụ 24h cho người sử dụng</p>
+					<p>${currentProduct.description}</p>
 
-					<div class="product-options">
+					<%-- <div class="product-options">
 						<label> Kích cỡ <select class="input-select">
 								<option value="0">X</option>
 						</select>
@@ -103,7 +97,7 @@
 								<option value="0">Đỏ</option>
 						</select>
 						</label>
-					</div>
+					</div> --%>
 
 					<div class="add-to-cart">
 						<div class="qty-label">
@@ -127,8 +121,10 @@
 
 					<ul class="product-links">
 						<li>Loại sản phẩm:</li>
-						<li><a href="#">Headphones</a></li>
-						<li><a href="#">Phụ kiện</a></li>
+						<s:iterator>
+							<li><a href="#">${currentProduct.productType}</a></li>
+						</s:iterator>
+
 					</ul>
 
 					<ul class="product-links">
@@ -360,183 +356,130 @@
 			<div class="col-md-12">
 				<div class="section-title text-center">
 					<h3 class="title">Sản Phẩm Tương Tự</h3>
+											<div id="tab7" class="tab-pane fade in">
+							<div class="products-slick" data-nav="#slick-nav-hot-2">
+								<!-- product -->
+								<s:iterator value="relaventProducts">
+										<div class="product">
+											<div class="product-img">
+												<img src="${imageUrl}" alt="">
+												<div class="product-label">
+													<s:if test="discount != 0">
+														<s:set var=""></s:set>
+														<span class="sale">-${discountByPercent}% </span>
+													</s:if>
+													<s:if test="productTrend.toString().equals('Hot')">
+														<span class="new">${productTrend}</span>
+													</s:if>
+												</div>
+											</div>
+											<div class="product-body">
+												<p class="product-category">
+													<s:property value="productType" />
+												</p>
+												<h3 class="product-name">
+													<s:url var="url" action="detailAction">
+														<s:param name="id">
+															<s:property value="id" />
+														</s:param>
+													</s:url>
+													<a href="<s:property value="#url" />"><s:property
+															value="name" /></a>
+												</h3>
+												<h4 class="product-price">
+													${priceFormated}
+													<s:if test="discount != 0">
+														<del class="product-old-price">${oldPrice}</del>
+													</s:if>
+												</h4>
+												<div class="product-rating">
+													<s:iterator begin="1" end="rating">
+														<i class="fa fa-star"></i>
+													</s:iterator>
+												</div>
+												<div class="product-btns">
+													<button class="add-to-wishlist">
+														<i class="fa fa-heart-o"></i><span class="tooltipp">Yêu
+															thích</span>
+													</button>
+													<button class="add-to-compare">
+														<i class="fa fa-exchange"></i><span class="tooltipp">So
+															sánh</span>
+													</button>
+													<button class="quick-view">
+														<i class="fa fa-eye"></i><span class="tooltipp">Xem
+															nhanh</span>
+													</button>
+												</div>
+											</div>
+											<div class="add-to-cart">
+												<button class="add-to-cart-btn">
+													<i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng
+												</button>
+											</div>
+										</div>
+								</s:iterator>
+								<!-- /product -->
+							</div>
+							<div id="slick-nav" class="products-slick-nav"></div>
+						</div>
+					
 				</div>
 			</div>
 
-			<!-- product -->
+			<%-- <!-- product -->
 			<div class="col-md-3 col-xs-6">
 				<div class="product">
-					<div class="product-img">
-						<img src="./img/product01.png" alt="">
-						<div class="product-label">
-							<span class="sale">-30%</span>
+					<s:iterator value="relaventProducts">
+						<div class="product-img">
+							<img src="${imageUrl}" alt="">
+							<div class="product-label">
+								<span class="sale">-30%</span>
+							</div>
 						</div>
-					</div>
-					<div class="product-body">
-						<p class="product-category">LAPTOP</p>
-						<h3 class="product-name">
-							<a href="#">MACBOOK AIR</a>
-						</h3>
-						<h4 class="product-price">
-							24.000.000 VND
-							<del class="product-old-price">25.000.000 VND</del>
-						</h4>
-						<div class="product-rating"></div>
-						<div class="product-btns">
-							<button class="add-to-wishlist">
-								<i class="fa fa-heart-o"></i><span class="tooltipp"> Yêu
-									thích</span>
-							</button>
-							<button class="add-to-compare">
-								<i class="fa fa-exchange"></i><span class="tooltipp"> So
-									sánh</span>
-							</button>
-							<button class="quick-view">
-								<i class="fa fa-eye"></i><span class="tooltipp">Xem Nhanh</span>
+						<div class="product-body">
+							<p class="product-category">${productType}</p>
+							<h3 class="product-name">
+								<a href="#">${name}</a>
+							</h3>
+							<h4 class="product-price">
+								${priceFormated}
+								<s:if test="discount != 0">
+									<del class="product-old-price">${oldPrice}</del>
+								</s:if>
+							</h4>
+							<div class="product-rating">
+								<s:iterator begin="1" end="rating">
+									<i class="fa fa-star"></i>
+								</s:iterator>
+							</div>
+							<div class="product-btns">
+								<button class="add-to-wishlist">
+									<i class="fa fa-heart-o"></i><span class="tooltipp"> Yêu
+										thích</span>
+								</button>
+								<button class="add-to-compare">
+									<i class="fa fa-exchange"></i><span class="tooltipp"> So
+										sánh</span>
+								</button>
+								<button class="quick-view">
+									<i class="fa fa-eye"></i><span class="tooltipp">Xem
+										Nhanh</span>
+								</button>
+							</div>
+						</div>
+						<div class="add-to-cart">
+							<button class="add-to-cart-btn">
+								<i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng
 							</button>
 						</div>
-					</div>
-					<div class="add-to-cart">
-						<button class="add-to-cart-btn">
-							<i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng
-						</button>
-					</div>
+					</s:iterator>
 				</div>
-			</div>
-			<!-- /product -->
 
-			<!-- product -->
-			<div class="col-md-3 col-xs-6">
-				<div class="product">
-					<div class="product-img">
-						<img src="./img/product02.png" alt="">
-						<div class="product-label">
-							<span class="new">Mới</span>
-						</div>
-					</div>
-					<div class="product-body">
-						<p class="product-category">Headphone</p>
-						<h3 class="product-name">
-							<a href="#">Headphone Sony</a>
-						</h3>
-						<h4 class="product-price">
-							700.000 VND
-							<del class="product-old-price">800.000 VND</del>
-						</h4>
-						<div class="product-rating">
-							<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-								class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-								class="fa fa-star"></i>
-						</div>
-						<div class="product-btns">
-							<button class="add-to-wishlist">
-								<i class="fa fa-heart-o"></i><span class="tooltipp">Yêu
-									thích </span>
-							</button>
-							<button class="add-to-compare">
-								<i class="fa fa-exchange"></i><span class="tooltipp"> So
-									sánh</span>
-							</button>
-							<button class="quick-view">
-								<i class="fa fa-eye"></i><span class="tooltipp"> Xem
-									nhanh</span>
-							</button>
-						</div>
-					</div>
-					<div class="add-to-cart">
-						<button class="add-to-cart-btn">
-							<i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng
-						</button>
-					</div>
-				</div>
 			</div>
-			<!-- /product -->
-
-			<div class="clearfix visible-sm visible-xs"></div>
-
-			<!-- product -->
-			<div class="col-md-3 col-xs-6">
-				<div class="product">
-					<div class="product-img">
-						<img src="./img/product03.png" alt="">
-					</div>
-					<div class="product-body">
-						<p class="product-category">Laptop</p>
-						<h3 class="product-name">
-							<a href="#">Macbook Pro</a>
-						</h3>
-						<h4 class="product-price">
-							20.000.000 VND
-							<del class="product-old-price">21.000.000 VND</del>
-						</h4>
-						<div class="product-rating">
-							<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-								class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-								class="fa fa-star-o"></i>
-						</div>
-						<div class="product-btns">
-							<button class="add-to-wishlist">
-								<i class="fa fa-heart-o"></i><span class="tooltipp">Yêu
-									thích </span>
-							</button>
-							<button class="add-to-compare">
-								<i class="fa fa-exchange"></i><span class="tooltipp"> So
-									sánh</span>
-							</button>
-							<button class="quick-view">
-								<i class="fa fa-eye"></i><span class="tooltipp"> Xem
-									nhanh</span>
-							</button>
-						</div>
-					</div>
-					<div class="add-to-cart">
-						<button class="add-to-cart-btn">
-							<i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng
-						</button>
-					</div>
-				</div>
-			</div>
-			<!-- /product -->
-
-			<!-- product -->
-			<div class="col-md-3 col-xs-6">
-				<div class="product">
-					<div class="product-img">
-						<img src="./img/product04.png" alt="">
-					</div>
-					<div class="product-body">
-						<p class="product-category">Tablet</p>
-						<h3 class="product-name">
-							<a href="#">Samsung Tablet</a>
-						</h3>
-						<h4 class="product-price">
-							12.000.000 VND
-							<del class="product-old-price">13.000.000 VND</del>
-						</h4>
-						<div class="product-rating"></div>
-						<div class="product-btns">
-							<button class="add-to-wishlist">
-								<i class="fa fa-heart-o"></i><span class="tooltipp"> Yêu
-									thích</span>
-							</button>
-							<button class="add-to-compare">
-								<i class="fa fa-exchange"></i><span class="tooltipp"> So
-									sánh</span>
-							</button>
-							<button class="quick-view">
-								<i class="fa fa-eye"></i><span class="tooltipp"> Xem
-									nhanh</span>
-							</button>
-						</div>
-					</div>
-					<div class="add-to-cart">
-						<button class="add-to-cart-btn">
-							<i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng
-						</button>
-					</div>
-				</div>
-			</div>
-			<!-- /product -->
+			<!-- /product --> --%>
+			<!-- tab laptops -->
+						<!-- /tab laptops -->
 
 		</div>
 		<!-- /row -->
