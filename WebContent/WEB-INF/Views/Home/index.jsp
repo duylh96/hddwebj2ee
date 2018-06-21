@@ -11,13 +11,11 @@
 		<div id="responsive-nav">
 			<!-- NAV -->
 			<ul class="main-nav nav navbar-nav">
-				<li class="active"><a href="#">Trang chủ</a></li>
-				<li><a href="#">Gía hấp dẫn</a></li>
-				<li><a href="#">Loại sản phẩm</a></li>
-				<li><a href="#">Laptops</a></li>
-				<li><a href="#">Smartphones</a></li>
-				<li><a href="#">Cameras</a></li>
-				<li><a href="#">Phụ kiện</a></li>
+				<li class="active"><a href="">Trang chủ</a></li>
+				<!-- <li><a href="#tab1">Laptops</a></li>
+				<li><a href="#tab2">Smartphones</a></li>
+				<li><a href="#tab3">Cameras</a></li>
+				<li><a href="#tab4">Phụ kiện</a></li> -->
 			</ul>
 			<!-- /NAV -->
 		</div>
