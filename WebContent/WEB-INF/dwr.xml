@@ -3,9 +3,9 @@
     "http://getahead.org/dwr/dwr30.dtd">
 
 <dwr>
-  <allow>
-    <create creator="new" javascript="JDate">
-      <param name="class" value="java.util.Date"/>
-    </create>
-  </allow>
+	<allow>
+		<create creator="new" javascript="CartAjax">
+			<param name="class" value="com.hdd.action.HomeAction" />
+		</create>
+	</allow>
 </dwr>

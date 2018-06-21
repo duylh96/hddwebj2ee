@@ -1,6 +1,5 @@
 package com.hdd.action;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import com.hdd.constants.HDDWebConstants;
@@ -21,6 +20,10 @@ public class DetailAction extends ActionSupport {
 	ProductDTO currentProduct;
 
 	public String execute() {
+		ProductDAO dao = new ProductDAO();
+		currentProduct = dao.getDetail(id).get(0);
+		relaventProducts = dao.getRelaventList(currentProduct.getProductType());
+
 		return HDDWebConstants.DETAIL;
 	}
 

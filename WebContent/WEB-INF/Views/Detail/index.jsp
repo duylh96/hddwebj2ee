@@ -10,11 +10,9 @@
 		<div class="row">
 			<div class="col-md-12">
 				<ul class="breadcrumb-tree">
-					<li><a href="#">Trang Chủ</a></li>
-					<li><a href="#">Tất cả sản phẩm</a></li>
-					<li><a href="#">Phụ kiện</a></li>
-					<li><a href="#">Headphones</a></li>
-					<li class="active"><s:property value="id" /></li>
+					<s:url var="url" action="homeAction"></s:url>
+					<li><a href="${url}">Trang Chủ</a></li>
+					<li class="active">${currentProduct.name}</li>
 				</ul>
 			</div>
 		</div>
@@ -77,14 +75,15 @@
 			<!-- Product details -->
 			<div class="col-md-5">
 				<div class="product-details">
-					<h2 class="product-name">Macbook Pro 2017</h2>
+					<h2 class="product-name">${currentProduct.name}</h2>
 					<div>
 						<div class="product-rating">
 							<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
 								class="fa fa-star"></i> <i class="fa fa-star"></i> <i
 								class="fa fa-star-o"></i>
 						</div>
-						<a class="review-link" href="#">10 Bình luận | Thêm bình luận của bạn</a>
+						<a class="review-link" href="#">10 Bình luận | Thêm bình luận
+							của bạn</a>
 					</div>
 					<div>
 						<h3 class="product-price">
@@ -93,7 +92,8 @@
 						</h3>
 						<span class="product-available">Còn Hàng</span>
 					</div>
-					<p>Đây là dòng sản phẩm mới, với công nghệ mới nhất hiện, pin trâu giúp phục vụ 24h cho người sử dụng</p>
+					<p>Đây là dòng sản phẩm mới, với công nghệ mới nhất hiện, pin
+						trâu giúp phục vụ 24h cho người sử dụng</p>
 
 					<div class="product-options">
 						<label> Kích cỡ <select class="input-select">
@@ -148,7 +148,8 @@
 				<div id="product-tab">
 					<!-- product tab nav -->
 					<ul class="tab-nav">
-						<li class="active"><a data-toggle="tab" href="#tab1">Mô tả</a></li>
+						<li class="active"><a data-toggle="tab" href="#tab1">Mô
+								tả</a></li>
 						<li><a data-toggle="tab" href="#tab2">Chi tiết</a></li>
 						<li><a data-toggle="tab" href="#tab3">Đánh giá (3)</a></li>
 					</ul>
@@ -160,7 +161,8 @@
 						<div id="tab1" class="tab-pane fade in active">
 							<div class="row">
 								<div class="col-md-12">
-									<p>Đây là sản phẩm tốt, tôi đã sử dụng rất thường xuyên độ bền rất cao, chống nước hiệu quả.</p>
+									<p>Đây là sản phẩm tốt, tôi đã sử dụng rất thường xuyên độ
+										bền rất cao, chống nước hiệu quả.</p>
 								</div>
 							</div>
 						</div>
@@ -170,7 +172,8 @@
 						<div id="tab2" class="tab-pane fade in">
 							<div class="row">
 								<div class="col-md-12">
-									<p>Sản phẩm với nhiều tính năng mới rất tiện dụng, phù hợp cho sinh viên, nhân viên văn phòng</p>
+									<p>Sản phẩm với nhiều tính năng mới rất tiện dụng, phù hợp
+										cho sinh viên, nhân viên văn phòng</p>
 								</div>
 							</div>
 						</div>
@@ -261,7 +264,8 @@
 													</div>
 												</div>
 												<div class="review-body">
-													<p>Sản phẩm tốt đáng được sử dụng, giá cả phải chăng, phù hợp cho mọi tầng lớp</p>
+													<p>Sản phẩm tốt đáng được sử dụng, giá cả phải chăng,
+														phù hợp cho mọi tầng lớp</p>
 												</div>
 											</li>
 											<li>
@@ -275,7 +279,8 @@
 													</div>
 												</div>
 												<div class="review-body">
-													<p>Sẳn phẩm rất tuyệt vời, chất lượng bảo hành tốt, pin trâu, vote 5*</p>
+													<p>Sẳn phẩm rất tuyệt vời, chất lượng bảo hành tốt, pin
+														trâu, vote 5*</p>
 												</div>
 											</li>
 											<li>
@@ -289,7 +294,8 @@
 													</div>
 												</div>
 												<div class="review-body">
-													<p>Sản phẩm tốt, thỏa mãn nhu cầu người sử dụng, mang lại nhiều tiện ích cho người dùng</p>
+													<p>Sản phẩm tốt, thỏa mãn nhu cầu người sử dụng, mang
+														lại nhiều tiện ích cho người dùng</p>
 												</div>
 											</li>
 										</ul>
@@ -378,16 +384,15 @@
 						<div class="product-rating"></div>
 						<div class="product-btns">
 							<button class="add-to-wishlist">
-								<i class="fa fa-heart-o"></i><span class="tooltipp">
-									Yêu thích</span>
+								<i class="fa fa-heart-o"></i><span class="tooltipp"> Yêu
+									thích</span>
 							</button>
 							<button class="add-to-compare">
-								<i class="fa fa-exchange"></i><span class="tooltipp">
-									So sánh</span>
+								<i class="fa fa-exchange"></i><span class="tooltipp"> So
+									sánh</span>
 							</button>
 							<button class="quick-view">
-								<i class="fa fa-eye"></i><span class="tooltipp">Xem
-									Nhanh</span>
+								<i class="fa fa-eye"></i><span class="tooltipp">Xem Nhanh</span>
 							</button>
 						</div>
 					</div>
@@ -425,16 +430,16 @@
 						</div>
 						<div class="product-btns">
 							<button class="add-to-wishlist">
-								<i class="fa fa-heart-o"></i><span class="tooltipp">Yêu thích
-									</span>
+								<i class="fa fa-heart-o"></i><span class="tooltipp">Yêu
+									thích </span>
 							</button>
 							<button class="add-to-compare">
-								<i class="fa fa-exchange"></i><span class="tooltipp">
-									So sánh</span>
+								<i class="fa fa-exchange"></i><span class="tooltipp"> So
+									sánh</span>
 							</button>
 							<button class="quick-view">
-								<i class="fa fa-eye"></i><span class="tooltipp">
-									Xem nhanh</span>
+								<i class="fa fa-eye"></i><span class="tooltipp"> Xem
+									nhanh</span>
 							</button>
 						</div>
 					</div>
@@ -461,7 +466,7 @@
 							<a href="#">Macbook Pro</a>
 						</h3>
 						<h4 class="product-price">
-						 20.000.000 VND
+							20.000.000 VND
 							<del class="product-old-price">21.000.000 VND</del>
 						</h4>
 						<div class="product-rating">
@@ -471,16 +476,16 @@
 						</div>
 						<div class="product-btns">
 							<button class="add-to-wishlist">
-								<i class="fa fa-heart-o"></i><span class="tooltipp">Yêu thích
-									</span>
+								<i class="fa fa-heart-o"></i><span class="tooltipp">Yêu
+									thích </span>
 							</button>
 							<button class="add-to-compare">
-								<i class="fa fa-exchange"></i><span class="tooltipp">
-									So sánh</span>
+								<i class="fa fa-exchange"></i><span class="tooltipp"> So
+									sánh</span>
 							</button>
 							<button class="quick-view">
-								<i class="fa fa-eye"></i><span class="tooltipp">
-									Xem nhanh</span>
+								<i class="fa fa-eye"></i><span class="tooltipp"> Xem
+									nhanh</span>
 							</button>
 						</div>
 					</div>
@@ -511,16 +516,16 @@
 						<div class="product-rating"></div>
 						<div class="product-btns">
 							<button class="add-to-wishlist">
-								<i class="fa fa-heart-o"></i><span class="tooltipp">
-									Yêu thích</span>
+								<i class="fa fa-heart-o"></i><span class="tooltipp"> Yêu
+									thích</span>
 							</button>
 							<button class="add-to-compare">
-								<i class="fa fa-exchange"></i><span class="tooltipp">
-									So sánh</span>
+								<i class="fa fa-exchange"></i><span class="tooltipp"> So
+									sánh</span>
 							</button>
 							<button class="quick-view">
-								<i class="fa fa-eye"></i><span class="tooltipp">
-									Xem nhanh</span>
+								<i class="fa fa-eye"></i><span class="tooltipp"> Xem
+									nhanh</span>
 							</button>
 						</div>
 					</div>
